@@ -34,7 +34,7 @@ def login(request):
         if role == 'EMPLOYER':
             return HttpResponseRedirect(reverse('employer:employer'))
         else:
-            return HttpResponseRedirect(reverse('employee:employee'))
+            return HttpResponseRedirect(reverse('employee:homepage'))
 
     else:
         context = {'login_form': login_form, 'title': title}
