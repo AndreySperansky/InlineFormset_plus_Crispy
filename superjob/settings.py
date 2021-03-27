@@ -26,6 +26,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mainapp.apps.MainappConfig',       # приложение.файл apps.py.класс MainappConfig
+    # 'authapp.apps.AuthappConfig',
+    # 'employee.apps.EmployeeConfig',
+    # 'employer.apps.EmployerConfig',
+    'crispy_forms',
+    'dynamic_formsets',
 ]
 
 MIDDLEWARE = [
@@ -121,7 +127,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-CRISPY_TEMPLATE_PACK = 'bootstrap3'
+# CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 # AUTH_USER_MODEL = 'authapp.InfojobUser'
 CRISPY_FAILS_SILENTLY = not DEBUG

@@ -1,0 +1,161 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-8 mb-5">
+                <h2>What We Do</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi
+                    soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam.
+                    Repellat explicabo, maiores!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur
+                    magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt
+                    voluptate. Voluptatum.</p>
+                <a class="btn btn-primary btn-lg" href="{% url 'authapp:login' %}">Call to Action &raquo;</a>
+            </div>
+            <div class="col-md-4 mb-5">
+                <h2>Contact Us</h2>
+                <hr>
+                <address>
+                    <strong>InfoJob</strong>
+                    <br>3481 Melrose Place
+                    <br>Beverly Hills, CA 90210
+                    <br>
+                </address>
+                <address>
+                    <abbr title="Phone">Phone:</abbr>
+                    (123) 456-7890
+                    <br>
+                    <abbr title="Email">Email:</abbr>
+                    <a href="mailto:#">name@example.com</a>
+                </address>
+            </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-md-12 mb-5">
+                <h2>News</h2>
+                <hr>
+
+                <div class="container mt-3">
+                    <h1>{{ title }}</h1>
+                    <div class="row">
+                        <div class="col-md-12">
+                            {% for item in news %}
+                                <div class="card mb-3">
+                                    <div class="card-header">
+                                        Категория: {{ item.category }}
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="media">
+                                            {% if item.photo %}
+                                                <img src="{{ item.photo.url }}" alt="" width="350" class="mr-3">
+                                            {% else %}
+                                                <img src="https://picsum.photos/id/866/picsum/350/263" alt="">
+                                            {% endif %}
+                                            <div class="media-body">
+                                                <h5 class="card-title {% cycle 'text-danger' 'text-success' %}">{{ item.title }}</h5>
+                                                <p class="card-text">{{ item.content|linebreaks|truncatewords:50 }}</p>
+                                                <a href="#" class="btn btn-primary">Read more...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        {{ item.created_at|date:"Y-m-d H:i:s" }}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /.container -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mb-5">
+                <h2>Our Partners</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 mb-5">
+                <div class="card h-90">
+                    <img class="card-img-top" src="https://placehold.it/150x100" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mb-5">
+                <div class="card h-90">
+                    <img class="card-img-top" src="https://placehold.it/150x100" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mb-5">
+                <div class="card h-90">
+                    <img class="card-img-top" src="https://placehold.it/150x100" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 mb-5">
+                <div class="card h-90">
+                    <img class="card-img-top" src="https://placehold.it/150x100" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mb-5">
+                <div class="card h-90">
+                    <img class="card-img-top" src="https://placehold.it/150x100" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mb-5">
+                <div class="card h-90">
+                    <img class="card-img-top" src="https://placehold.it/150x100" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+            </div>
+
+            {#      <div class="col-md-2 mb-5">#}
+            {#        <div class="card h-150">#}
+            {#          <img class="card-img-top" src="https://placehold.it/150x100" alt="">#}
+            {#          <div class="card-body">#}
+            {#            <h4 class="card-title">Card title</h4>#}
+            {#            <p class="card-text">Lorem ipsum dolor sit amet</p>#}
+            {#          </div>#}
+            {#          <div class="card-footer">#}
+            {#            <a href="#" class="btn btn-primary">Find Out More!</a>#}
+            {#          </div>#}
+            {#        </div>#}
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+{% endblock %}
