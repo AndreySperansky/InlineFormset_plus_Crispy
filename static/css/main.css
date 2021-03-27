@@ -1,0 +1,46 @@
+/*!
+ * Start Bootstrap - Business Frontpage (https://startbootstrap.com/template/business-frontpage)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-frontpage/blob/master/LICENSE)
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+    background: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    padding:0;
+
+  /*padding-top: 56px;*/
+}
+
+.display {
+    margin-bottom: 150px;
+    padding:0;
+}
+
+
+.container {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    background: none;
+    padding:0;
+}
+
+.card {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+}
+
+h2 {
+    font-family: 'Lobster', cursive; color: blue;
+}
+
+footer {
+    margin-top: 50px;
+}

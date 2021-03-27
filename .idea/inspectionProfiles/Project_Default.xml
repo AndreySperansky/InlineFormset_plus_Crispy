@@ -1,0 +1,42 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="nav-item" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="6">
+            <item index="0" class="java.lang.String" itemvalue="wincertstore" />
+            <item index="1" class="java.lang.String" itemvalue="django-crispy-forms" />
+            <item index="2" class="java.lang.String" itemvalue="Django" />
+            <item index="3" class="java.lang.String" itemvalue="django-dynamic-formsets" />
+            <item index="4" class="java.lang.String" itemvalue="certifi" />
+            <item index="5" class="java.lang.String" itemvalue="pytz" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="common.variables" />
+          <option value="common.utils" />
+          <option value="lesson_6.dz6_.common.decos.*" />
+          <option value="common.descryptors" />
+          <option value="common.decos" />
+          <option value="lesson_7.dz7_.server.*" />
+          <option value="lesson_1.pepper_app.app.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
